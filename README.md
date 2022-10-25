@@ -79,5 +79,6 @@ In each service you can find same structure:
 - Russian speakers only (sorry for this): [Record from the stream where I worked on this repository](https://youtu.be/_tiiYZGMsUs)
 
 ## How to setup project locally
+Web App run: rackup -p 9293
+Kafka: bundle exec karafka server
 
-SOON
