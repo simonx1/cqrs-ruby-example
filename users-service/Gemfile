@@ -6,12 +6,12 @@ ruby '~> 2.7.0'
 
 gem 'dry-system', github: 'dry-rb/dry-system'
 gem "sinatra"
-gem 'thin'
+gem 'puma'
 
 gem 'rom'
 gem 'rom-sql'
 gem 'rom-repository'
-gem 'pg'
+gem 'mysql2'
 
 gem 'dotenv'
 gem 'rake'
@@ -20,3 +20,5 @@ gem 'dry-struct'
 gem 'dry-monads'
 
 gem 'waterdrop'
+gem 'pry'
+

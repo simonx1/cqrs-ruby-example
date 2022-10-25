@@ -58,13 +58,22 @@ end
 
 class JsonDeserializer
   def call(message)
-    JSON.parse(message.payload, symbolize_names: true)
+    json = JSON.parse(message.payload, symbolize_names: true)
+    sanitize_data(json[:data])
+    json
+  end
+
+  private
+
+  def sanitize_data(data)
+    data.each  { |k,v|
+      data[k] = v.is_a?(Hash) ? sanitize_data(data) : (k.to_s =~ /.*_at/ ? Time.parse(v) : v) }
   end
 end
 
 class KarafkaApp < Karafka::App
   setup do |config|
-    config.kafka.seed_brokers = %w[kafka://192.168.1.65:9092]
+    config.kafka.seed_brokers = %w[kafka://localhost:9092]
     config.client_id = 'consumer_app'
     config.backend = :inline
     config.batch_fetching = true
