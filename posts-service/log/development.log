@@ -3281,3 +3281,59 @@ I, [2022-10-25T15:33:53.557126 #57050]  INFO -- : Stopping Karafka server 57050
 I, [2022-10-25T15:33:53.559866 #57050]  INFO -- : Leaving group `consumer_app_post_service_comments_group`
 I, [2022-10-25T15:33:53.559980 #57050]  INFO -- : Leaving group `consumer_app_post_service_posts_group`
 I, [2022-10-25T15:33:53.560059 #57050]  INFO -- : Leaving group `consumer_app_post_service_users_group`
+I, [2022-10-25T15:37:28.964705 #79759]  INFO -- : Initializing Karafka server 79759
+I, [2022-10-25T15:37:28.974357 #79759]  INFO -- : Running Karafka server 79759
+I, [2022-10-25T15:37:28.975050 #79759]  INFO -- : New topics added to target list: post-topic
+I, [2022-10-25T15:37:28.978670 #79759]  INFO -- : Fetching cluster metadata from kafka://localhost:9092
+I, [2022-10-25T15:37:28.978612 #79759]  INFO -- : New topics added to target list: comment-topic
+I, [2022-10-25T15:37:28.978766 #79759]  INFO -- : Fetching cluster metadata from kafka://localhost:9092
+I, [2022-10-25T15:37:28.978217 #79759]  INFO -- : New topics added to target list: user-topic
+I, [2022-10-25T15:37:28.978797 #79759]  INFO -- : Fetching cluster metadata from kafka://localhost:9092
+I, [2022-10-25T15:37:29.078514 #79759]  INFO -- : Discovered cluster metadata; nodes: localhost:9092 (node_id=1)
+I, [2022-10-25T15:37:29.078767 #79759]  INFO -- : Discovered cluster metadata; nodes: localhost:9092 (node_id=1)
+I, [2022-10-25T15:37:29.078666 #79759]  INFO -- : Discovered cluster metadata; nodes: localhost:9092 (node_id=1)
+I, [2022-10-25T15:37:29.079311 #79759]  INFO -- : [[consumer_app_post_service_users_group] {}:] Joining group `consumer_app_post_service_users_group`
+I, [2022-10-25T15:37:29.079756 #79759]  INFO -- : [[consumer_app_post_service_users_group] {}:] Will fetch at most 1048576 bytes at a time per partition from user-topic
+I, [2022-10-25T15:37:29.079837 #79759]  INFO -- : [[consumer_app_post_service_users_group] {}:] Fetching cluster metadata from kafka://localhost:9092
+I, [2022-10-25T15:37:29.080029 #79759]  INFO -- : [[consumer_app_post_service_comments_group] {}:] Joining group `consumer_app_post_service_comments_group`
+I, [2022-10-25T15:37:29.080284 #79759]  INFO -- : [[consumer_app_post_service_posts_group] {}:] Joining group `consumer_app_post_service_posts_group`
+I, [2022-10-25T15:37:29.080367 #79759]  INFO -- : [[consumer_app_post_service_comments_group] {}:] Will fetch at most 1048576 bytes at a time per partition from comment-topic
+I, [2022-10-25T15:37:29.080704 #79759]  INFO -- : [[consumer_app_post_service_comments_group] {}:] Fetching cluster metadata from kafka://localhost:9092
+I, [2022-10-25T15:37:29.080637 #79759]  INFO -- : [[consumer_app_post_service_posts_group] {}:] Will fetch at most 1048576 bytes at a time per partition from post-topic
+I, [2022-10-25T15:37:29.080844 #79759]  INFO -- : [[consumer_app_post_service_posts_group] {}:] Fetching cluster metadata from kafka://localhost:9092
+I, [2022-10-25T15:37:29.098796 #79759]  INFO -- : [[consumer_app_post_service_users_group] {}:] Discovered cluster metadata; nodes: localhost:9092 (node_id=1)
+I, [2022-10-25T15:37:29.098977 #79759]  INFO -- : [[consumer_app_post_service_users_group] {}:] There are no partitions to fetch from, sleeping for 1s
+I, [2022-10-25T15:37:29.099075 #79759]  INFO -- : [[consumer_app_post_service_posts_group] {}:] Discovered cluster metadata; nodes: localhost:9092 (node_id=1)
+I, [2022-10-25T15:37:29.099220 #79759]  INFO -- : [[consumer_app_post_service_comments_group] {}:] Discovered cluster metadata; nodes: localhost:9092 (node_id=1)
+I, [2022-10-25T15:37:29.099289 #79759]  INFO -- : [[consumer_app_post_service_posts_group] {}:] There are no partitions to fetch from, sleeping for 1s
+I, [2022-10-25T15:37:29.099393 #79759]  INFO -- : [[consumer_app_post_service_comments_group] {}:] There are no partitions to fetch from, sleeping for 1s
+I, [2022-10-25T15:37:30.104426 #79759]  INFO -- : [[consumer_app_post_service_users_group] {}:] There are no partitions to fetch from, sleeping for 1s
+I, [2022-10-25T15:37:30.105067 #79759]  INFO -- : [[consumer_app_post_service_posts_group] {}:] There are no partitions to fetch from, sleeping for 1s
+I, [2022-10-25T15:37:30.105160 #79759]  INFO -- : [[consumer_app_post_service_comments_group] {}:] There are no partitions to fetch from, sleeping for 1s
+I, [2022-10-25T15:37:31.110041 #79759]  INFO -- : [[consumer_app_post_service_users_group] {}:] There are no partitions to fetch from, sleeping for 1s
+I, [2022-10-25T15:37:31.110154 #79759]  INFO -- : [[consumer_app_post_service_posts_group] {}:] There are no partitions to fetch from, sleeping for 1s
+I, [2022-10-25T15:37:31.110205 #79759]  INFO -- : [[consumer_app_post_service_comments_group] {}:] There are no partitions to fetch from, sleeping for 1s
+I, [2022-10-25T15:37:32.110713 #79759]  INFO -- : [[consumer_app_post_service_posts_group] {}:] There are no partitions to fetch from, sleeping for 1s
+I, [2022-10-25T15:37:32.110784 #79759]  INFO -- : [[consumer_app_post_service_users_group] {}:] There are no partitions to fetch from, sleeping for 1s
+I, [2022-10-25T15:37:32.110816 #79759]  INFO -- : [[consumer_app_post_service_comments_group] {}:] There are no partitions to fetch from, sleeping for 1s
+I, [2022-10-25T15:37:32.182270 #79759]  INFO -- : [[consumer_app_post_service_comments_group] {}:] Joined group `consumer_app_post_service_comments_group` with member id `consumer_app-e6112cbc-fc98-4953-b493-23745e848452`
+I, [2022-10-25T15:37:32.182432 #79759]  INFO -- : [[consumer_app_post_service_comments_group] {}:] Chosen as leader of group `consumer_app_post_service_comments_group`
+I, [2022-10-25T15:37:32.203601 #79759]  INFO -- : [[consumer_app_post_service_posts_group] {}:] Joined group `consumer_app_post_service_posts_group` with member id `consumer_app-865ba25c-bc12-4a37-91f5-c10a4c6606ba`
+I, [2022-10-25T15:37:32.203646 #79759]  INFO -- : [[consumer_app_post_service_posts_group] {}:] Chosen as leader of group `consumer_app_post_service_posts_group`
+I, [2022-10-25T15:37:32.230373 #79759]  INFO -- : [[consumer_app_post_service_users_group] {}:] Joined group `consumer_app_post_service_users_group` with member id `consumer_app-1a12f6b9-9b64-4567-b0b5-ac5bc767b239`
+I, [2022-10-25T15:37:32.230465 #79759]  INFO -- : [[consumer_app_post_service_users_group] {}:] Chosen as leader of group `consumer_app_post_service_users_group`
+I, [2022-10-25T15:37:32.268131 #79759]  INFO -- : [[consumer_app_post_service_posts_group] {}:] Partitions assigned for `post-topic`: 0
+I, [2022-10-25T15:37:32.268805 #79759]  INFO -- : [[consumer_app_post_service_comments_group] {}:] Partitions assigned for `comment-topic`: 0
+I, [2022-10-25T15:37:32.275720 #79759]  INFO -- : [[consumer_app_post_service_users_group] {}:] Partitions assigned for `user-topic`: 0
+I, [2022-10-25T15:37:33.115234 #79759]  INFO -- : [[consumer_app_post_service_posts_group] {post-topic: 0}:] Seeking post-topic/0 to offset 0
+I, [2022-10-25T15:37:33.115339 #79759]  INFO -- : [[consumer_app_post_service_posts_group] {post-topic: 0}:] New topics added to target list: post-topic
+I, [2022-10-25T15:37:33.115358 #79759]  INFO -- : [[consumer_app_post_service_posts_group] {post-topic: 0}:] Fetching cluster metadata from kafka://localhost:9092
+I, [2022-10-25T15:37:33.115940 #79759]  INFO -- : [[consumer_app_post_service_users_group] {user-topic: 0}:] Seeking user-topic/0 to offset 7
+I, [2022-10-25T15:37:33.116063 #79759]  INFO -- : [[consumer_app_post_service_comments_group] {comment-topic: 0}:] Seeking comment-topic/0 to offset 0
+I, [2022-10-25T15:37:33.116120 #79759]  INFO -- : [[consumer_app_post_service_users_group] {user-topic: 0}:] New topics added to target list: user-topic
+I, [2022-10-25T15:37:33.116187 #79759]  INFO -- : [[consumer_app_post_service_users_group] {user-topic: 0}:] Fetching cluster metadata from kafka://localhost:9092
+I, [2022-10-25T15:37:33.116158 #79759]  INFO -- : [[consumer_app_post_service_comments_group] {comment-topic: 0}:] New topics added to target list: comment-topic
+I, [2022-10-25T15:37:33.116226 #79759]  INFO -- : [[consumer_app_post_service_comments_group] {comment-topic: 0}:] Fetching cluster metadata from kafka://localhost:9092
+I, [2022-10-25T15:37:33.140479 #79759]  INFO -- : [[consumer_app_post_service_comments_group] {comment-topic: 0}:] Discovered cluster metadata; nodes: localhost:9092 (node_id=1)
+I, [2022-10-25T15:37:33.140641 #79759]  INFO -- : [[consumer_app_post_service_users_group] {user-topic: 0}:] Discovered cluster metadata; nodes: localhost:9092 (node_id=1)
+I, [2022-10-25T15:37:33.140564 #79759]  INFO -- : [[consumer_app_post_service_posts_group] {post-topic: 0}:] Discovered cluster metadata; nodes: localhost:9092 (node_id=1)

@@ -79,6 +79,13 @@ In each service you can find same structure:
 - Russian speakers only (sorry for this): [Record from the stream where I worked on this repository](https://youtu.be/_tiiYZGMsUs)
 
 ## How to setup project locally
-Web App run: rackup -p 9293
-Kafka: bundle exec karafka server
+- Web App run: rackup -p 9293
+- Kafka: bundle exec karafka server
+- Docker: https://developer.confluent.io/quickstart/kafka-docker/
 
+Listen:
+```
+kafka-console-consumer --bootstrap-server broker:9092 \
+                       --topic user-topic \
+                       --from-beginning
+```
