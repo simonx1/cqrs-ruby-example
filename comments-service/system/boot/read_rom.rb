@@ -11,7 +11,7 @@ App.boot(:read_rom) do |app|
       # configuration.default.create_table(:comments) do
       #   primary_key :id
       #   column :body, String, null: false
-      #   column :author_id, Integer, null: false
+      #   column :author_name, String, null: false
       #   column :post_id, Integer, null: false
       #   column :created_at, DateTime, null: false
       #   column :updated_at, DateTime, null: false

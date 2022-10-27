@@ -19,10 +19,11 @@ APP_LOADER.enable_reloading
 APP_LOADER.setup
 APP_LOADER.eager_load
 
-class PostTopicConsumer < Karafka::BaseConsumer
+class CommentTopicConsumer < Karafka::BaseConsumer
   def consume
     params_batch.each do |message|
       puts
+      puts "=== Post Event ==="
       puts message.payload
 
       App['event_handlers.comment_created'].call(message.payload)
@@ -48,7 +49,7 @@ end
 class KarafkaApp < Karafka::App
   setup do |config|
     config.kafka.seed_brokers = %w[kafka://localhost:9092]
-    config.client_id = 'consumer_app'
+    config.client_id = 'comments_consumer_app'
     config.backend = :inline
     config.batch_fetching = true
   end
@@ -74,8 +75,8 @@ class KarafkaApp < Karafka::App
 
   consumer_groups.draw do
     consumer_group :comment_service_comment_group do
-      topic :'post-topic' do
-        consumer PostTopicConsumer
+      topic :'comment-topic' do
+        consumer CommentTopicConsumer
 
         deserializer JsonDeserializer.new
       end

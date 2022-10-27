@@ -74,7 +74,7 @@ end
 class KarafkaApp < Karafka::App
   setup do |config|
     config.kafka.seed_brokers = %w[kafka://localhost:9092]
-    config.client_id = 'consumer_app'
+    config.client_id = 'posts_consumer_app'
     config.backend = :inline
     config.batch_fetching = true
   end

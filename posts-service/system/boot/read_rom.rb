@@ -20,6 +20,7 @@ App.boot(:read_rom) do |app|
       #   column :title, String, null: false
       #   column :body, String, null: false
       #   column :author_id, Integer, null: false
+      #   column :comments_count, Integer, null: false, default: 0
       #   column :created_at, DateTime, null: false
       #   column :updated_at, DateTime, null: false
       # end

@@ -10,6 +10,10 @@ class WebApp < Sinatra::Base
     App['queries.list'].call.map(&:to_h).to_json
   end
 
+  get "/comments/:id" do
+    App['queries.show'].call(id: params[:id]).to_h.to_json
+  end
+
   get "/posts/:post_id/comments" do
     App['queries.list_for_post'].call(post_id: params[:post_id]).map(&:to_h).to_json
   end

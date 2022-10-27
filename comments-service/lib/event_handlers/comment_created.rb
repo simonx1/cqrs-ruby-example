@@ -6,7 +6,7 @@ module EventHandlers
       data = event[:data]
       author_id = data.delete(:author_id)
 
-      response = Faraday.get "http://localhost:3001/users/#{author_id}"
+      response = Faraday.get "http://localhost:9292/users/#{author_id}"
       user = JSON.parse(response.body, symbolize_names: true)
 
       data[:author_name] = user[:full_name]

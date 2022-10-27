@@ -89,3 +89,75 @@ kafka-console-consumer --bootstrap-server broker:9092 \
                        --topic user-topic \
                        --from-beginning
 ```
+
+Kafka delete queue:
+```
+docker exec --interactive --tty broker \
+kafka-topics --bootstrap-server broker:9092 \
+                       --topic post-topic \
+                       --delete
+```
+
+APIs:
+- Users Service:
+```
+GET /
+GET /users
+GET /users/:id
+POST /users
+```
+- Posts Service
+```
+GET /
+GET /posts
+GET /posts/:id
+POST /posts
+```
+- Comments Service
+```
+GET /
+GET /comments
+GET /comments/:id
+GET /posts/:post_id/comments
+POST /comments
+```
+
+Data Model:
+- User
+```
+DROP TABLE IF EXISTS users;
+CREATE TABLE `users` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `full_name` varchar(255) NOT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+```
+- Post
+```
+DROP TABLE IF EXISTS posts;
+CREATE TABLE `posts` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `body` varchar(255) NOT NULL,
+  `author_id` int NOT NULL,
+  `comments_count` int NOT NULL DEFAULT 0,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+```
+- Comment
+```
+DROP TABLE IF EXISTS comments;
+CREATE TABLE `comments` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `body` varchar(255) NOT NULL,
+  `author_id` int NOT NULL,
+  `post_id` int NOT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+```
