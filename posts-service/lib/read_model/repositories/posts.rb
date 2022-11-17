@@ -9,6 +9,10 @@ module ReadModel
         root.to_a
       end
 
+      def with_comments
+        root.combine(:comments).to_a
+      end
+
       def find_with_comments(id)
         root.combine(:comments).by_pk(id).one
       end

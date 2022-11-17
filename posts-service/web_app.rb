@@ -7,7 +7,8 @@ class WebApp < Sinatra::Base
   end
 
   get "/posts" do
-    App['queries.list'].call.map(&:to_h).to_json
+    with_comments = params[:with_comments]
+    App['queries.list'].call(with_comments).map(&:to_h).to_json
   end
 
   get "/posts/:id" do
